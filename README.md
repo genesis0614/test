@@ -1,1 +1,1 @@
-![AWS Hello](https://github.com/username/repo_name/blob/main/images/AWS_hello.png)
+![AWS Hello](https://raw.githubusercontent.com/genesis0614/test/refs/heads/main/20220401_6246bcd6c88c8.png)
