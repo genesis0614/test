@@ -1,0 +1,24 @@
+rOXhSx6CE9bkpwsCVUpNqWl6u5xgK98XZ5K5N0AYjNbojzGK8YSpi4uqJDH/sezXOj59+Ybvks3C+AStV+MVpg==
+
+rOXhSx6CE9bkpwsCVUpNqWl6u5xgK98XZ5K5N0AYjNbojzGK8YSpi4uqJDH/sezXOj59+Ybvks3C+AStV+MVpg==
+
+
+rOXhSx6CE9bkpwsCVUpNqWl6u5xgK98XZ5K5N0AYjNbojzGK8YSpi4uqJDH/sezXOj59+Ybvks3C+AStV+MVpg==
+
+
+DefaultEndpointsProtocol=https;AccountName=contosostoragexxgaypower;AccountKey=SpsV9YZwvojCXGMCDwALv6PGYDhaD/q1qKpfJl1xbVYGdrjGCVO9WNZW0eTImdp+AMHJq/kS/54++ASteNe5/A==;EndpointSuffix=core.windows.net
+
+
+
+$RGName = "AZ-104-Module11"
+   
+New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile VMs.json -TemplateParameterFile VMs.parameters.json
+
+
+----------------------------------
+
+$acctKey = ConvertTo-SecureString -String "rOXhSx6CE9bkpwsCVUpNqWl6u5xgK98XZ5K5N0AYjNbojzGK8YSpi4uqJDH/sezXOj59+Ybvks3C+AStV+MVpg==" -AsPlainText -Force
+
+$credential = New-Object System.Management.Automation.PSCredential -ArgumentList "Azure\contosostoragexxgaypower", $acctKey
+
+New-PSDrive -Name Z -PSProvider FileSystem -Root "\\contosostoragexxgaypower.file.core.windows.net\marketing" -Credential $credential
